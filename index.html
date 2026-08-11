@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>生日快樂 - 專屬於你的浪漫海灘與曼谷之夜</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 背景音樂 (loop 迴圈播放) -->
+  <audio id="bgMusic" loop>
+    <source src="muise.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- 1. 清晨海灘 Scene -->
+  <section class="scene active" id="scene1">
+    <div class="sky-background morning">
+      <div class="envelope-area" id="envelopeArea">
+        <div class="envelope-body" id="envelopeBody">
+          <div class="envelope-flap"></div>
+          <div class="envelope-back"></div>
+          <div class="envelope-front"></div>
+        </div>
+        <div class="letter-paper" id="letterPaper">
+          <div class="letter-content">
+            <p class="letter-text">
+                                      ที่รักของฉัน อากิ ，<br>
+                                      ฉันอยากจับมือคุณและพาคุณไปฟังเสียงคลื่น。<br>
+                                      สุขสันต์วันเกิดนะ ที่รักของฉัน อากิ!。
+            </p>
+            
+            <svg class="cute-cat" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+              <path d="M256 128c-61.9 0-114 40.4-131.8 96H80c-26.5 0-48 21.5-48 48v80c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-80c0-26.5-21.5-48-48-48h-44.2C370 168.4 317.9 128 256 128zm-56 104c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24zm112 0c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24 z" fill="#2c3e50"/>
+              <path d="M128 128L64 48v120.3c20.3-22 47.9-37.7 78.8-44.1L128 128zM384 128l64-80v120.3c-20.3-22-47.9-37.7-78.8-44.1L384 128z" fill="#2c3e50"/>
+            </svg>
+
+            <span class="next-btn-text" id="btnScene1Next">หน้าจอถัดไป</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. 午後亮藍海浪 Scene -->
+  <section class="scene" id="scene2">
+    <div class="ocean-background" id="oceanBg">
+      <div class="soft-caustics-container" id="causticsContainer"></div>
+      
+      <div class="glass-card scene2-card" id="scene2Card">
+        <p class="ocean-quote">
+                           ทะเลสีครามนี้งดงามเป็นพิเศษ เหมือนกับดวงตาที่ลึกซึ้งและอ่อนโยนที่ฉันเห็นเมื่อแรกมองคุณ。
+        </p>
+        <button class="next-scene-btn" id="btnScene2Next">ชมพระอาทิตย์ตกด้วยกัน</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 黃昏晚霞生日祝福 Scene -->
+  <section class="scene" id="scene3">
+    <div class="sunset-background" id="sunsetBg">
+      <div class="sand-dune"></div>
+      
+      <svg class="palm-tree tree-left" viewBox="0 0 100 100">
+        <path d="M45,100 Q40,60 50,30 Q45,25 30,35 Q35,20 50,15 Q40,10 20,5 Q45,5 55,10 Q65,0 75,10 Q60,15 70,25 Q85,15 80,30 Q65,30 55,35 Q60,60 55,100 Z" fill="#3a1c0d"/>
+      </svg>
+      <svg class="palm-tree tree-right" viewBox="0 0 100 100">
+        <path d="M55,100 Q60,60 50,30 Q55,25 70,35 Q65,20 50,15 Q60,10 80,5 Q55,5 45,10 Q35,0 25,10 Q40,15 30,25 Q15,15 20,30 Q35,30 45,35 Q40,60 45,100 Z" fill="#3a1c0d"/>
+      </svg>
+
+      <!-- 生日卡片 -->
+      <div class="glass-card sunset-card" id="birthdayCard">
+        <h1 class="birthday-title">Happy Birthday My love Aki</h1>
+        <p class="birthday-text">
+                           ฉันปรารถนาเหลือเกินที่จะได้ชมพระอาทิตย์ขึ้นและพระอาทิตย์ตกนับครั้งไม่ถ้วนกับคุณ ตั้งแต่แสงแรกของรุ่งอรุณจนถึงค่ำคืนที่เต็มไปด้วยดวงดาว。<br>
+                           สุขสันต์วันเกิดแด่ที่รักของฉัน ขอให้คุณเปล่งประกายสดใสอยู่เสมอ。
+        </p>
+        <div class="button-group">
+          <button class="next-scene-btn restart-btn" id="btnRestart">คิดถึง</button>
+          <button class="next-scene-btn thai-night-btn" id="btnThaiNight">ตลาดนัดกลางคืนและงานเลี้ยงอาหารค่ำเทศกาลช้างไทย</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 泰國蘇林大象節夜市與高級餐廳 Scene -->
+  <section class="scene" id="scene4">
+    <div class="thai-night-background" id="thaiNightBg">
+      <div class="lanterns-container">
+        <div class="lantern"></div>
+        <div class="lantern"></div>
+        <div class="lantern"></div>
+        <div class="lantern"></div>
+      </div>
+      <div class="glass-card thai-card" id="thaiCard">
+        <span class="thai-badge">ผมกับภรรยาที่น่ารักของผม</span>
+        <h2 class="thai-title">ดินเนอร์สุดโรแมนติกที่ตลาดกลางคืนของไทย</h2>
+        <p class="thai-text">
+                        ยินดีต้อนรับสู่เทศกาลช้างสุรินทร์อันงดงามในประเทศไทย! ภายใต้ท้องฟ้าที่เต็มไปด้วยดวงดาว ตลาดที่คึกคักสว่างไสวด้วยแสงสีทองอร่าม เชิญเดินจูงมือกัน ลิ้มรสอาหารไทยรสเลิศ และสัมผัสประสบการณ์การเฉลิมฉลองทางวัฒนธรรมที่ผสมผสานความรุ่งโรจน์และความอบอุ่น ให้ความรักเบ่งบานอย่างงดงามในค่ำคืนทางใต้
+        </p>
+        <button class="next-scene-btn restart-btn" id="btnScene4Next">หน้าจอถัดไป</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 曼谷遠景與煙火升空 Scene -->
+  <section class="scene" id="scene5">
+    <div class="bangkok-sky-scene" id="bangkokSky">
+      <!-- 山丘剪影背景 -->
+      <div class="mountain-silhouette"></div>
+
+      <!-- 45% 透明度雲霧 -->
+      <div class="cloud-overlay"></div>
+
+      <!-- 遠眺曼谷大樓與燈光夜景 -->
+      <div class="bangkok-city-view" id="cityView">
+        <div class="skyscraper building-1"></div>
+        <div class="skyscraper building-2"></div>
+        <div class="skyscraper building-3"></div>
+        <div class="skyscraper building-4"></div>
+        <div class="skyscraper building-5"></div>
+      </div>
+
+      <!-- 煙花：3個最大煙火 + 從城市中飛出的小煙火 -->
+      <div class="fireworks-container" id="fireworksContainer">
+        <div class="mega-firework mega-fw-1"></div>
+        <div class="mega-firework mega-fw-2"></div>
+        <div class="mega-firework mega-fw-3"></div>
+        
+        <div class="launching-firework fw-1"><div class="firework-spark"></div></div>
+        <div class="launching-firework fw-2"><div class="firework-spark"></div></div>
+        <div class="launching-firework fw-3"><div class="firework-spark"></div></div>
+      </div>
+
+      <!-- 直長方形手機通知卡片（帶有擬真手機邊緣亮光） -->
+      <div class="phone-notification-card" id="phoneCard">
+        <div class="phone-screen-reflection"></div>
+        <div class="phone-notch"></div>
+        <div class="notification-time">09:09:09</div>
+        <div class="notification-body">
+          <p class="thai-msg">เราจะอยู่ด้วยกันตลอดไปนะ ❤️</p>
+          <p class="zh-msg">我們永遠在一起好嗎 ❤️</p>
+        </div>
+        <!-- 點擊觸發 iPhone 風格的透明玻璃選項彈窗 -->
+        <div class="phone-close-action" id="phoneCloseBtn">
+          <span>關閉頁面 (ปิดหน้าจอ)</span>
+        </div>
+      </div>
+
+      <!-- iPhone 風格的常規規模透明玻璃選項彈窗 -->
+      <div class="iphone-glass-modal" id="iphoneModal">
+        <div class="glass-modal-content">
+          <p class="modal-title-thai">คุณต้องการความทรงจำนี้ไหม?</p>
+          <p class="modal-title-zh">要將這段回憶好好保存嗎？</p>
+          <button class="modal-action-btn" id="modalMemoryBtn">回憶 (ความทรงจำ)</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. 漸黑與最終泰語告白 Scene (改為標準 scene 確保層級與過渡正確) -->
+  <section class="scene" id="scene6">
+    <div class="blackout-screen" id="blackoutScreen">
+      <div class="final-love-content" id="finalContent">
+        <p class="final-thai">ผมจะรักคุณตลอดไป สัญญา อากิ!❤️</p>
+        <p class="final-zh">我會永遠愛你，答應我好嗎 萩雅玲!❤️</p>
+        <button class="next-scene-btn restart-btn final-restart-btn" id="btnFinalRestart">回憶 (ความทรงจำ)</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 第一幕：SVG 流體海浪轉場 -->
+  <div class="ocean-wave-transition" id="waveTransition">
+    <div class="wave-body-solid"></div>
+    <svg class="transition-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path fill="#64b5f6" fill-opacity="1" d="M0,128L48,144C96,160,192,192,288,181.3C384,171,480,117,576,106.7C672,96,768,128,864,154.7C960,181,1056,203,1152,197.3C1248,192,1344,160,1392,144L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+    </svg>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
